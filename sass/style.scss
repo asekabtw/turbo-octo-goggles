@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+// font-family: "Fraunces", serif;
+// font-family: "Montserrat", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+// Content
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: hsl(32, 37%, 92%);
+
+  &__wrapper {
+    width: 21rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .content {
+    &__wrapper {
+      display: flex;
+      width: auto;
+    }
+  }
+}
+
+// Image
+.image {
+  width: 21rem;
+  &__item {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .image {
+    &__item {
+      &--desktop {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+// Info
+.info {
+  padding: 1.25rem;
+  width: 21rem;
+
+  &__suptitle {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.45rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: hsl(228, 12%, 48%);
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    font-family: "Fraunces", serif;
+  }
+
+  &__desc {
+    margin-bottom: 1rem;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.8rem;
+    width: 90%;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .info {
+    padding: 2rem;
+
+    &__suptitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__desc {
+      font-size: 1rem;
+      width: auto;
+      line-height: 1.65rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Price
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+  &__new {
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+  }
+
+  &__old {
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    color: hsl(228, 12%, 48%);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .price {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Button
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 0.5rem;
+  color: #fff;
+}
